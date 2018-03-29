@@ -1,0 +1,14 @@
+{
+  "name": "propressureclean",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./.server.js",
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "author": "Edgars Mjasnikovs",
+  "license": "ISC",
+  "devDependencies": {
+    "simple-autoreload-server": "0.2.7"
+  }
+}

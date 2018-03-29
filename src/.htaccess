@@ -1,0 +1,28 @@
+<Files ~ "\.(ttf|woff|eot|svg)$">
+	Header add Access-Control-Allow-Origin "*"
+</Files>
+
+#Kompresija
+<ifModule mod_deflate.c>
+ <filesMatch "\.(eot|svg|ttf|woff|ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+  SetOutputFilter DEFLATE
+ </filesMatch>
+</ifModule>
+
+# Speed up caching
+FileETag MTime Size
+
+# Speed up caching
+FileETag MTime Size
+
+# Expires
+ExpiresActive On
+ExpiresDefault "access plus 7 days"
+
+
+#Browser kešatmi'ma - glabât statiskus failus 7 dienas
+<ifModule mod_headers.c>
+ <filesMatch "\.(eot|svg|ttf|woff|ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+  Header set Cache-Control "max-age=604800, public"
+ </filesMatch>
+</ifModule>
